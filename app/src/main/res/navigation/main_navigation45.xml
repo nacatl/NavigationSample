@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation45"
+    app:startDestination="@id/main4Fragment">
+
+    <fragment
+        android:id="@+id/main4Fragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.Main4Fragment"
+        android:label="main4_fragment"
+        tools:layout="@layout/main4_fragment" >
+
+        <action
+            android:id="@+id/action_main4Fragment_to_main5Fragment"
+            app:destination="@id/main5Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/main5Fragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.Main5Fragment"
+        android:label="main5_fragment"
+        tools:layout="@layout/main5_fragment" />
+
+    <include app:graph="@navigation/sub_navigation" />
+
+    <action
+        android:id="@+id/action_global_subFragment"
+        app:destination="@id/sub_navigation"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+</navigation>

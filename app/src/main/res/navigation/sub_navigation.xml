@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sub_navigation"
+    app:startDestination="@+id/subFragment">
+
+    <fragment
+        android:id="@+id/sub2Fragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.Sub2Fragment"
+        android:label="Sub2Fragment" />
+    <fragment
+        android:id="@+id/subFragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.SubFragment"
+        android:label="SubFragment" >
+        <action
+            android:id="@+id/action_subFragment_to_sub2Fragment"
+            app:destination="@id/sub2Fragment" />
+    </fragment>
+</navigation>

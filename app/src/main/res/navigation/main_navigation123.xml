@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_main2Fragment"
+            app:destination="@id/main2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/main2Fragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.Main2Fragment"
+        android:label="main2_fragment"
+        tools:layout="@layout/main2_fragment" >
+        <action
+            android:id="@+id/action_main2Fragment_to_main3Fragment"
+            app:destination="@id/main3Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_main2Fragment_to_main4Fragment"
+            app:destination="@id/main4Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/main3Fragment"
+        android:name="nacatl.sliver.navigationsample.ui.main.Main3Fragment"
+        android:label="main3_fragment"
+        tools:layout="@layout/main3_fragment" >
+        <action
+            android:id="@+id/action_main3Fragment_to_main4Fragment"
+            app:destination="@id/main_navigation45"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <include app:graph="@navigation/main_navigation45" />
+
+</navigation>
